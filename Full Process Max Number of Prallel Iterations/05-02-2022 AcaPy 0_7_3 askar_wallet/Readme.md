@@ -1,4 +1,4 @@
-# Full Process Constant Load
+# Full Process Max Number of Prallel Iterations
 
 ## Test Configuration
 - number-of-iterations: 5000
