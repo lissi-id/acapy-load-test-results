@@ -1,0 +1,78 @@
+49090 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311560581 presentationExchangeId=b6dc1248-71a7-436e-ad7d-69c08ad892c5 connectionId=8b6e4eb9-84ff-423d-a691-aefbfdd8c59a state=PRESENTATION_RECEIVED
+49091 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311560578 credentialExchangeId=1760890b-f792-422e-aa25-77271306d103 connectionId=2b67b778-7907-46cd-b03c-c1335c77f6a2 state=CREDENTIAL_ACKED
+49109 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/connections/receive-invitation httpCode=200 durationInMs=146.44671
+49109 INFO  c.b.s.g.a.t.f.FullProcessRunner - Started 129 of 5000 iteration
+49113 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311560606 presentationExchangeId=2518c44c-ac95-47c9-aed5-5f1e91ebd758 connectionId=2b67b778-7907-46cd-b03c-c1335c77f6a2 state=REQUEST_SENT
+49123 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/present-proof/send-request httpCode=200 durationInMs=32.400678
+49124 INFO  c.b.s.g.a.t.f.FullProcessRunner - Send proof request
+49158 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311560647 credentialExchangeId=cc89f941-559e-450d-ae45-06befb5cb106 connectionId=8d9316ce-650f-4630-a115-a67524067ee5 state=CREDENTIAL_ISSUED
+49170 INFO  c.b.s.g.a.logger.AriesEventLogger - type=connectionRecord time=1644311560668 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=INVITATION
+49178 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/connections/create-invitation httpCode=200 durationInMs=29.798838
+49178 INFO  c.b.s.g.a.logger.AriesEventLogger - type=connectionRecord time=1644311560676 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=REQUEST
+49215 INFO  c.b.s.g.a.logger.AriesEventLogger - type=connectionRecord time=1644311560711 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=RESPONSE
+49224 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311560712 presentationExchangeId=b6dc1248-71a7-436e-ad7d-69c08ad892c5 connectionId=8b6e4eb9-84ff-423d-a691-aefbfdd8c59a state=VERIFIED
+49224 INFO  c.b.s.g.a.t.f.FullProcessRunner - Received valid proof presentation
+49238 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/connections/receive-invitation httpCode=200 durationInMs=59.582656
+49238 INFO  c.b.s.g.a.t.f.FullProcessRunner - Started 130 of 5000 iteration
+49308 INFO  c.b.s.g.a.logger.AriesEventLogger - type=connectionRecord time=1644311560804 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=REQUEST
+49319 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311560808 presentationExchangeId=9f97da58-cbc0-4d67-801e-b73c25b7c21a connectionId=ad69eef2-1ef4-48f2-93b7-ac2a35475e28 state=PRESENTATION_RECEIVED
+49346 INFO  c.b.s.g.a.logger.AriesEventLogger - type=connectionRecord time=1644311560842 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=RESPONSE
+49353 INFO  c.b.s.g.a.logger.AriesEventLogger - type=connectionRecord time=1644311560848 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=ACTIVE
+49387 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311560875 credentialExchangeId=b60a3682-9fee-4351-a836-83c6407957e4 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=OFFER_SENT
+49390 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311560883 credentialExchangeId=cc89f941-559e-450d-ae45-06befb5cb106 connectionId=8d9316ce-650f-4630-a115-a67524067ee5 state=CREDENTIAL_ACKED
+49401 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/issue-credential/send httpCode=200 durationInMs=48.129766
+49401 INFO  c.b.s.g.a.t.f.FullProcessRunner - Issued credential to new connection
+49408 INFO  c.b.s.g.a.logger.AriesEventLogger - type=connectionRecord time=1644311560906 connectionId=950a8b85-4c74-4b7e-b17c-d18af5fbd342 state=INVITATION
+49414 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311560906 presentationExchangeId=93f5f30d-71fc-487b-862e-bf4bb0acfac9 connectionId=8d9316ce-650f-4630-a115-a67524067ee5 state=REQUEST_SENT
+49418 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/connections/create-invitation httpCode=200 durationInMs=29.508788
+49423 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311560915 presentationExchangeId=9f97da58-cbc0-4d67-801e-b73c25b7c21a connectionId=ad69eef2-1ef4-48f2-93b7-ac2a35475e28 state=VERIFIED
+49423 INFO  c.b.s.g.a.t.f.FullProcessRunner - Received valid proof presentation
+49428 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/present-proof/send-request httpCode=200 durationInMs=38.070588
+49428 INFO  c.b.s.g.a.t.f.FullProcessRunner - Send proof request
+49449 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311560941 presentationExchangeId=2518c44c-ac95-47c9-aed5-5f1e91ebd758 connectionId=2b67b778-7907-46cd-b03c-c1335c77f6a2 state=PRESENTATION_RECEIVED
+49477 INFO  c.b.s.g.a.logger.AriesEventLogger - type=connectionRecord time=1644311560973 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=ACTIVE
+49495 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/connections/receive-invitation httpCode=500 durationInMs=76.905255
+49495 ERROR org.hyperledger.aries.BaseClient - code=500 message=Internal Server Error
+body=500 Internal Server Error
+
+Server got itself in trouble
+49510 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311561000 credentialExchangeId=d1aa9242-cfc8-4c96-8728-ebbe81cca859 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=OFFER_SENT
+49523 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/issue-credential/send httpCode=200 durationInMs=46.152357
+49524 INFO  c.b.s.g.a.t.f.FullProcessRunner - Issued credential to new connection
+49562 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311561056 credentialExchangeId=b60a3682-9fee-4351-a836-83c6407957e4 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=REQUEST_RECEIVED
+49602 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561087 presentationExchangeId=2518c44c-ac95-47c9-aed5-5f1e91ebd758 connectionId=2b67b778-7907-46cd-b03c-c1335c77f6a2 state=VERIFIED
+49602 INFO  c.b.s.g.a.t.f.FullProcessRunner - Received valid proof presentation
+49640 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311561129 credentialExchangeId=b60a3682-9fee-4351-a836-83c6407957e4 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=CREDENTIAL_ISSUED
+49692 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311561182 credentialExchangeId=d1aa9242-cfc8-4c96-8728-ebbe81cca859 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=REQUEST_RECEIVED
+49786 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311561274 credentialExchangeId=d1aa9242-cfc8-4c96-8728-ebbe81cca859 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=CREDENTIAL_ISSUED
+49793 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561280 presentationExchangeId=93f5f30d-71fc-487b-862e-bf4bb0acfac9 connectionId=8d9316ce-650f-4630-a115-a67524067ee5 state=PRESENTATION_RECEIVED
+49866 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311561357 credentialExchangeId=b60a3682-9fee-4351-a836-83c6407957e4 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=CREDENTIAL_ACKED
+49887 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561381 presentationExchangeId=1bd1f89f-f85f-4b13-9418-355929dca190 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=REQUEST_SENT
+49888 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/present-proof/send-request httpCode=200 durationInMs=21.152349
+49888 INFO  c.b.s.g.a.t.f.FullProcessRunner - Send proof request
+49935 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561422 presentationExchangeId=93f5f30d-71fc-487b-862e-bf4bb0acfac9 connectionId=8d9316ce-650f-4630-a115-a67524067ee5 state=VERIFIED
+49935 INFO  c.b.s.g.a.t.f.FullProcessRunner - Received valid proof presentation
+49984 INFO  c.b.s.g.a.logger.AriesEventLogger - type=credentialRecord time=1644311561477 credentialExchangeId=d1aa9242-cfc8-4c96-8728-ebbe81cca859 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=CREDENTIAL_ACKED
+50010 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561502 presentationExchangeId=0b9b5ecd-ca1c-4da6-a0db-d3ae84d0ff50 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=REQUEST_SENT
+50022 INFO  c.b.s.g.a.logger.HttpRequestLogger - type=http_request request=POST/present-proof/send-request httpCode=200 durationInMs=37.514917
+50023 INFO  c.b.s.g.a.t.f.FullProcessRunner - Send proof request
+50252 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561745 presentationExchangeId=1bd1f89f-f85f-4b13-9418-355929dca190 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=PRESENTATION_RECEIVED
+50359 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561850 presentationExchangeId=0b9b5ecd-ca1c-4da6-a0db-d3ae84d0ff50 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=PRESENTATION_RECEIVED
+50411 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561901 presentationExchangeId=1bd1f89f-f85f-4b13-9418-355929dca190 connectionId=b94c10f4-32c1-416b-a085-d631dcfe8b22 state=VERIFIED
+50411 INFO  c.b.s.g.a.t.f.FullProcessRunner - Received valid proof presentation
+50479 INFO  c.b.s.g.a.logger.AriesEventLogger - type=presentationRecord time=1644311561971 presentationExchangeId=0b9b5ecd-ca1c-4da6-a0db-d3ae84d0ff50 connectionId=f735bf69-42a8-44bd-ba8b-94427fb33a67 state=VERIFIED
+50479 INFO  c.b.s.g.a.t.f.FullProcessRunner - Received valid proof presentation
+52867 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20697647 time=1644311564373
+62867 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311574373
+72866 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311584372
+82866 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311594372
+92867 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311604373
+102866 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311614372
+112866 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311624372
+122866 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311634372
+132866 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311644372
+142867 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311654373
+152867 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311664373
+162867 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311674373
+172866 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311684372
+182867 INFO  c.b.s.g.a.logger.WalletLogger - type=database_size sizeInBytes=20812335 time=1644311694373
