@@ -36,5 +36,6 @@
 
 ## Ended
 - stopped after ~ 1467 iterations due to too many HTTP 500 from Holder AcaPys
-- Holder AcaPys fail on `POST/connections/receive-invitation`
-- maybe to many Holder AcaPys try to access the same wallet DB
+- Holder AcaPys fail on `POST/connections/receive-invitation` -> caused 304 failed HTTP Requests
+- many connection invitations, credential issuances, and proof requests stay pending
+- maybe too many Holder AcaPys try to access the same wallet DB
