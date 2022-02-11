@@ -1,9 +1,9 @@
-# Full Process Constant Load
+# Full Flow Constant Load
 
 ## Test Configuration
 - number-of-total-iterations: 5000
-- number-of-iterations-per-minute: 250
-- core-thread-pool-size: 250
+- number-of-iterations-per-minute: 300
+- core-thread-pool-size: 300
 - use-connectionless-proof-requests: false
 - one iteration consists of the following steps:
   - Create a connection
@@ -17,7 +17,7 @@
 ## Setup
 - started the full load testing setup using docker compose on the VM
 - 10x Issuer/Verifier AcaPy
-- 20x Holder AcaPy
+- 30x Holder AcaPy
 - Docker Images
   - bcgovimages/aries-cloudagent:py36-1.16-1_0.7.3
   - nginx:latest                                  
@@ -35,5 +35,7 @@
 
 
 ## Ended
-- ended after ~ 2500 iterations due to a HTTP 500 from a Holder AcaPy
-- a Holder AcaPy failed on `POST/connections/receive-invitation`
+- stopped after ~ 1467 iterations due to too many HTTP 500 from Holder AcaPys
+- Holder AcaPys fail on `POST/connections/receive-invitation` -> caused 304 failed HTTP Requests
+- many connection invitations, credential issuances, and proof requests stay pending
+- maybe too many Holder AcaPys try to access the same wallet DB

@@ -1,4 +1,4 @@
-# Full Process Max Number of Prallel Iterations
+# Full Flow Max Number of Prallel Iterations
 
 ## Test Configuration
 - number-of-iterations: 5000

@@ -1,9 +1,9 @@
-# Full Process Constant Load
+# Full Flow Constant Load
 
 ## Test Configuration
 - number-of-total-iterations: 5000
-- number-of-iterations-per-minute: 100
-- core-thread-pool-size: 100
+- number-of-iterations-per-minute: 250
+- core-thread-pool-size: 250
 - use-connectionless-proof-requests: false
 - one iteration consists of the following steps:
   - Create a connection
@@ -17,7 +17,7 @@
 ## Setup
 - started the full load testing setup using docker compose on the VM
 - 10x Issuer/Verifier AcaPy
-- 10x Holder AcaPy
+- 20x Holder AcaPy
 - Docker Images
   - bcgovimages/aries-cloudagent:py36-1.16-1_0.7.3
   - nginx:latest                                  
@@ -27,15 +27,13 @@
   - grafana/grafana-image-renderer:latest         
   - izakmarais/grafana-reporter                   
   - grafana/grafana:latest                        
-  - von-network-base                              
-
+  - von-network-base                             
 
 ## Wallet
 - Askar
 - Postgres Plugin
 
-## VM Utilization
-![VM Utilization](./vm_utilizaiton.png)
 
 ## Ended
-- I interrupted the test at ~1100 iterations to increase the load
+- ended after ~ 2500 iterations due to a HTTP 500 from a Holder AcaPy
+- a Holder AcaPy failed on `POST/connections/receive-invitation`
