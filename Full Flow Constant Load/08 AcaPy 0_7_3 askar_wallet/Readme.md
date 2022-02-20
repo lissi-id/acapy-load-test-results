@@ -1,8 +1,8 @@
 # Full Flow Constant Load
 
-## Virtual Machine
-- 16 CPUs
-- 64 GB RAM
+## Local Machine
+- 4 CPUs
+- 10 GB RAM
 
 ## Setup
 - 10 Holder AcaPy (Askar + separate in-memory sqlite DB for each instance)
