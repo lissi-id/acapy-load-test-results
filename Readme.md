@@ -9,8 +9,9 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 - [Full Flow Constant Load/09 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Full%20Flow%20Constant%20Load/09%20AcaPy%200_7_3%20askar_wallet)
 - [Full Flow Constant Load/10 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Full%20Flow%20Constant%20Load/10%20AcaPy%200_7_3%20askar_wallet)
 
-### Verified maximum performance of almost 600 full iterations per minute
-- [Full Flow Increasing Load/11 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Full%20Flow%20Increasing%20Load/11%20AcaPy%200_7_3%20askar_wallet)
+### Verified maximum performance of > 600 full iterations per minute
+- **~600:** [Full Flow Increasing Load/11 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Full%20Flow%20Increasing%20Load/11%20AcaPy%200_7_3%20askar_wallet)
+- **~650:** [Full Flow Increasing Load/12 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Full%20Flow%20Increasing%20Load/12%20AcaPy%200_7_3%20askar_wallet)
 
 ### Aries Askar seems to offer a more stable performance compared to the Indy SDK wallet
 - **Indy SDK Wallet:** [Full Flow Max Number of Prallel Iterations/02 AcaPy 0_7_3_indy_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Full%20Flow%20Max%20Number%20of%20Prallel%20Iterations/02%20AcaPy%200_7_3_indy_wallet)
@@ -46,8 +47,10 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 ### Holder database locked
 - **Test Reports**
   - [Full Flow Constant Load/07 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Full%20Flow%20Constant%20Load/07%20AcaPy%200_7_3%20askar_wallet)
+  - [Full Flow Increasing Load/12 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Full%20Flow%20Increasing%20Load/12%20AcaPy%200_7_3%20askar_wallet)
 - **Reproducibility**
-  - cannot reproduce it explicitly, have only seen it once
+  - cannot reproduce it explicitly, but have seen it multiple times
 - **Notes**
   - holder agents are using a sqlite database
   - agent does not seem to be able to recover from this error by itself
+  - during the second run I/O utilization of the host VM was at 100 % as the issue occurred - during the first run I/O Utilization was only at 80 %
