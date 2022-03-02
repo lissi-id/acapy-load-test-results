@@ -1,4 +1,4 @@
-# Issuer Flow Constant Load
+# Proof Request Flow Constant Load
 
 ## Virtual Machine
 - 16 CPUs
