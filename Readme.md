@@ -31,6 +31,7 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 - **Test Reports**
   - [Full Flow Increasing Load/08 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Increasing%20Load/08%20AcaPy%200_7_3%20askar_wallet)
   - [Full Flow Constant Load/08 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/08%20AcaPy%200_7_3%20askar_wallet)
+  - Errors do not occur if credentials are not revocable: [Non-Revokable/Full-Flow-Constant-Load/01 AcaPy 0_7_3](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Non-Revokable/Full-Flow-Constant-Load/01%20AcaPy%200_7_3%20askar_wallet)
 - **AcaPy Issues**
   - [AcaPy Issue 1588](https://github.com/hyperledger/aries-cloudagent-python/issues/1588)
 - **Reproducibility**
