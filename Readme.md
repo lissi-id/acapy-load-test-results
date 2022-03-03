@@ -60,6 +60,8 @@ Hypothesis: When ever a RevReg is full there is a chance that the system will cr
 - **RevReg Size of 10 - Crashed + `statement_timeout` set to 6000 ms did not help to recover:** [Full Flow Constant Load/16 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/16%20AcaPy%200_7_3%20askar_wallet)
 - **RevReg Size of 10 - Crashed + `lock_timeout` set to 6000 ms did not help to recover:** [Full Flow Constant Load/17 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/17%20AcaPy%200_7_3%20askar_wallet)
 
+- **RevReg Size of 10 - Crashed + `lock_timeout`, `statement_timeout`, and `idle_in_transaction_session` set to 60000 ms did not help to recover:** [Full Flow Constant Load/18 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/18%20AcaPy%200_7_3%20askar_wallet)
+
 ### RecipientKey is not a raw Ed25519VerificationKey2018 key
 - **Test Reports**
   - [Full Flow Increasing Load/10 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Increasing%20Load/10%20AcaPy%200_7_3%20askar_wallet)
