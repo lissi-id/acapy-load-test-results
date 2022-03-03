@@ -47,8 +47,10 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 ### Drops in performance correlate to creation of new revocation registries
 - [Full Flow Constant Load/14 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/14%20AcaPy%200_7_3%20askar_wallet)
 
-### Any RevReg Size may or may not cause issues - as smaller the RevReg size as higher the chance for a crash
+### Any RevReg Size may or may not cause issues
 Hypothesis: When ever a RevReg is full there is a chance that the system will crash completely. As smaller the RevReg size as more often a new RevReg needs to be created resulting in a hight chance that the system might crash.
+- as smaller the RevReg size as higher the chance for a crash
+- as higher the iteration/min rate as higher the chance for a crash
 
 - **RevReg Size of 1.000 - Crashed:** [Full Flow Constant Load/06 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/blob/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/06%20AcaPy%200_7_3%20askar_wallet)
 - **RevReg Size of 3.000 - Crashed:** [Full Flow Constant Load/07 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/07%20AcaPy%200_7_3%20askar_wallet)
@@ -56,6 +58,7 @@ Hypothesis: When ever a RevReg is full there is a chance that the system will cr
 - **RevReg Size of 3.000 - No Issues:** [Full Flow Constant Load/14 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/14%20AcaPy%200_7_3%20askar_wallet)
 - **RevReg Size of 10 - Crashed:** [Full Flow Constant Load/15 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/15%20AcaPy%200_7_3%20askar_wallet)
 - **RevReg Size of 10 - Crashed + `statement_timeout` set to 6000 ms did not help to recover:** [Full Flow Constant Load/16 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/16%20AcaPy%200_7_3%20askar_wallet)
+- **RevReg Size of 10 - Crashed + `lock_timeout` set to 6000 ms did not help to recover:** [Full Flow Constant Load/17 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/17%20AcaPy%200_7_3%20askar_wallet)
 
 ### RecipientKey is not a raw Ed25519VerificationKey2018 key
 - **Test Reports**
@@ -70,9 +73,11 @@ Hypothesis: When ever a RevReg is full there is a chance that the system will cr
 ### System crashes after "Record not found" exception
 - **Test Reports**
   - **RevReg Size of 3.000:** [Full Flow Increasing Load/09 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Increasing%20Load/09%20AcaPy%200_7_3%20askar_wallet)
-  - **RevReg Size of 10:** [Full Flow Constant Load/15 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/15%20AcaPy%200_7_3%20askar_wallet)
+  - **RevReg Size of 10 and iteration/min 200:** [Full Flow Constant Load/15 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/15%20AcaPy%200_7_3%20askar_wallet)
+  - **RevReg Size of 10 and iteration/min 200:** [Full Flow Constant Load/16 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/16%20AcaPy%200_7_3%20askar_wallet)
+  - **RevReg Size of 10 and iteration/min 375:** [Full Flow Constant Load/17 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/17%20AcaPy%200_7_3%20askar_wallet)
 - **Reproducibility**
-  - cannot reproduce it explicitly, but have seen it multiple times
+  - can be reproduced by having a hight iteration per minute rate and small RevReg size (e.g. 10)
 - **Notes**
   - "Record not found" exception is reported via webhook call (Credential Exchange Event)
 
