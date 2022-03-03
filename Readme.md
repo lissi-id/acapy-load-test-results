@@ -5,15 +5,14 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 
 # Findings Load Testing AcaPy 0.7.3 with Aries Askar
 ## Positiv Findings
-### Overloading AcaPy for 10 minutes does not crash the AcaPy
-- [Full Flow Constant Load/09 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/09%20AcaPy%200_7_3%20askar_wallet)
-- [Full Flow Constant Load/10 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/10%20AcaPy%200_7_3%20askar_wallet)
-
 ### Longest endurance test
 - **200 iterations per Minute for 12h (with Postgres HA):** [Full Flow Constant Load/11 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/11%20AcaPy%200_7_3%20askar_wallet)
 - **200 iterations per Minute for 12h (with single Postgres):** [Full Flow Constant Load/12 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/12%20AcaPy%200_7_3%20askar_wallet)
 
-### Verified maximum performance of > 600 full iterations per minute
+### Verified maximum peak performance in full iterations per minute
+#### 16 CPU / 64 RAM
+- **~400 (with Single Postgres):** [Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
+#### 32 CPU / 32 RAM
 - **~600 (with Single Postgres):** [Full Flow Increasing Load/11 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Increasing%20Load/11%20AcaPy%200_7_3%20askar_wallet)
 - **~650 (with Postgres HA):** [Full Flow Increasing Load/12 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Increasing%20Load/12%20AcaPy%200_7_3%20askar_wallet)
 
@@ -29,6 +28,10 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 - **One Sub-Wallet**
   - Without Multitenancy: [Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
   - Multitenancy: [Full Flow Increasing Load/01 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Full%20Flow%20Increasing%20Load/01%20AcaPy%200_7_3%20askar_wallet)
+
+### Overloading AcaPy for 10 minutes does not crash the AcaPy
+- [Full Flow Constant Load/09 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/09%20AcaPy%200_7_3%20askar_wallet)
+- [Full Flow Constant Load/10 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/10%20AcaPy%200_7_3%20askar_wallet)
 
 ## Identified Issues
 ### Credential issuance fails due to "Revocation registry metadata not found"
