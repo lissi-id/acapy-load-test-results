@@ -8,6 +8,9 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 ### Longest endurance test
 - **200 iterations per Minute for 12h (with Postgres HA):** [Full Flow Constant Load/11 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/11%20AcaPy%200_7_3%20askar_wallet)
 - **200 iterations per Minute for 12h (with single Postgres):** [Full Flow Constant Load/12 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Full%20Flow%20Constant%20Load/12%20AcaPy%200_7_3%20askar_wallet)
+- **300 iterations per Minute for 24h (with single Postgres):** [Non-Revokable/Full-Flow-Constant-Load/03 AcaPy 0_7_3](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Non-Revokable/Full-Flow-Constant-Load/03%20AcaPy%200_7_3%20askar_wallet)
+  - non-revokable
+  - holder agents threw errors after running for ca. 11 hours and ca. 200.000 iterations
 
 ### Verified maximum peak performance in full iterations per minute
 #### 16 CPU / 64 RAM
