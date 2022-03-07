@@ -31,10 +31,12 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 - **Indy SDK Wallet:** [Non-Revokable/Full Flow Constant Load/02 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Non-Revokable/Full-Flow-Constant-Load/02%20AcaPy%200_7_3%20indy_wallet)
 - **Askar Wallet:** [Non-Revokable/Full-Flow-Constant-Load/01 AcaPy 0_7_3](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Non-Revokable/Full-Flow-Constant-Load/01%20AcaPy%200_7_3%20askar_wallet)
 
-### AcaPy offers the same peak performance if multitenancy is enabled
-- **One Sub-Wallet**
-  - Without Multitenancy: [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
-  - Multitenancy: [Revokable/Full Flow Increasing Load/01 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/01%20AcaPy%200_7_3%20askar_wallet)
+### AcaPy offers the same peak performance if multitenancy is enabled and only ONE sub wallet is used
+- **Without Multitenancy**
+  - 400 iterations per minute: [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
+- **1 Sub-Wallet**
+  - 400 iterations per minute: [Revokable/Full Flow Increasing Load/01 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/01%20AcaPy%200_7_3%20askar_wallet)
+
 
 ### Overloading AcaPy for 10 minutes does not crash the AcaPy
 - [Revokable/Full Flow Constant Load/09 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Constant%20Load/09%20AcaPy%200_7_3%20askar_wallet)
@@ -104,3 +106,17 @@ Hypothesis: When ever a RevReg is full there is a chance that the system will cr
   - holder agents are using a sqlite database
   - agent does not seem to be able to recover from this error by itself
   - during the second run I/O utilization of the host VM was at 100 % as the issue occurred - during the first run I/O Utilization was only at 80 %
+
+### AcaPy performance drops significantly if multitenancy is enabled and more than one sub wallet is used
+- Errors are returned by the database:
+  - Error when updating storage record value. Backend error. Caused by: error returned from database: sorry, too many clients already.
+  - Error when finding storage record. Backend error. Caused by: error returned from database: sorry, too many clients already.
+
+- **Without Multitenancy**
+  - 400 iterations per minute: [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
+- **1 Sub-Wallet**
+  - 400 iterations per minute: [Revokable/Full Flow Increasing Load/01 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/01%20AcaPy%200_7_3%20askar_wallet)
+- **2 Sub-Wallets**
+  - 350 iterations per minute: [Revokable/Full Flow Increasing Load/03 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/03%20AcaPy%200_7_3%20askar_wallet)
+- **3 Sub-Wallets**
+  - XXX iterations per minute: [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
