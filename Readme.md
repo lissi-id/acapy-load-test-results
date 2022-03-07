@@ -119,4 +119,4 @@ Hypothesis: When ever a RevReg is full there is a chance that the system will cr
 - **2 Sub-Wallets**
   - 350 iterations per minute: [Revokable/Full Flow Increasing Load/03 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/03%20AcaPy%200_7_3%20askar_wallet)
 - **3 Sub-Wallets**
-  - XXX iterations per minute: [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
+  - 120 iterations per minute: [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
