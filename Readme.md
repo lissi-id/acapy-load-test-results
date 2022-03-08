@@ -112,11 +112,13 @@ Hypothesis: When ever a RevReg is full there is a chance that the system will cr
   - Error when updating storage record value. Backend error. Caused by: error returned from database: sorry, too many clients already.
   - Error when finding storage record. Backend error. Caused by: error returned from database: sorry, too many clients already.
 
-- **Without Multitenancy**
+- **Without Multitenancy [Single Postgres]**
   - 400 iterations per minute: [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
-- **1 Sub-Wallet**
+- **1 Sub-Wallet [Single Postgres]**
   - 400 iterations per minute: [Revokable/Full Flow Increasing Load/01 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/01%20AcaPy%200_7_3%20askar_wallet)
-- **2 Sub-Wallets**
+- **2 Sub-Wallets [Single Postgres]**
   - 350 iterations per minute: [Revokable/Full Flow Increasing Load/03 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/03%20AcaPy%200_7_3%20askar_wallet)
-- **3 Sub-Wallets**
+- **3 Sub-Wallets [Single Postgres]**
   - 120 iterations per minute: [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
+- **3 Sub-Wallets [Postgres Cluster]**
+  - 140 iterations per minute: [Revokable/Full Flow Increasing Load/05 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/05%20AcaPy%200_7_3%20askar_wallet)
