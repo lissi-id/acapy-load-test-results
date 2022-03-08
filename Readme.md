@@ -15,8 +15,8 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 ### Verified maximum peak performance in full iterations per minute
 #### 16 CPU / 64 RAM
 - **~400 (with Single Postgres):** [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
-- **~470 iterations per minute (3 Sub-Wallets; Single Postgres; 200 Connections Max; 10 Connections per AcaPy):** [Revokable/Full Flow Increasing Load/06 AcaPy 0_7_3
-  askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/06%20AcaPy%200_7_3%20askar_wallet)
+- **~480 iterations per minute (3 Sub-Wallets; Single Postgres; 200 Connections Max; 10 Connections per AcaPy):** [Revokable/Full Flow Increasing Load/08 AcaPy 0_7_3
+  askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/08%20AcaPy%200_7_3%20askar_wallet)
 - **~550 (with Single Postgres; non-revocable credentials):** [Non-Revokable/Full-Flow-Increasing-Load/01 AcaPy 0_7_3](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Non-Revokable/Full-Flow-Increasing-Load/01%20AcaPy%200_7_3%20askar_wallet)
 #### 32 CPU / 32 RAM
 - **~600 (with Single Postgres):** [Revokable/Full Flow Increasing Load/11 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/11%20AcaPy%200_7_3%20askar_wallet)
@@ -33,7 +33,7 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 - **Indy SDK Wallet:** [Non-Revokable/Full Flow Constant Load/02 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Non-Revokable/Full-Flow-Constant-Load/02%20AcaPy%200_7_3%20indy_wallet)
 - **Askar Wallet:** [Non-Revokable/Full-Flow-Constant-Load/01 AcaPy 0_7_3](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Non-Revokable/Full-Flow-Constant-Load/01%20AcaPy%200_7_3%20askar_wallet)
 
-### AcaPy offers the same peak performance if multitenancy is enabled
+### AcaPy offers a similar peak performance if multitenancy is enabled
 - **Without Multitenancy [Single Postgres]**
   - 400 iterations per minute (100 Connections Max; 5 Connections per AcaPy): [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3
     askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
@@ -44,6 +44,8 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 - **3 Sub-Wallets [Single Postgres]**
   - 120 iterations per minute (100 Connections Max; 5 Connections per AcaPy): [Revokable/Full Flow Increasing Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/04%20AcaPy%200_7_3%20askar_wallet)
   - 470 iterations per minute (200 Connections Max; 10 Connections per AcaPy): [Revokable/Full Flow Increasing Load/06 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/06%20AcaPy%200_7_3%20askar_wallet)
+  - 460 iterations per minute (300 Connections Max; 15 Connections per AcaPy): [Revokable/Full Flow Increasing Load/07 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/07%20AcaPy%200_7_3%20askar_wallet)
+  - 480 iterations per minute (200 Connections Max; 10 Connections per AcaPy): [Revokable/Full Flow Increasing Load/08 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/08%20AcaPy%200_7_3%20askar_wallet)
 
 ### Overloading AcaPy for 10 minutes does not crash the AcaPy
 - [Revokable/Full Flow Constant Load/09 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Constant%20Load/09%20AcaPy%200_7_3%20askar_wallet)
