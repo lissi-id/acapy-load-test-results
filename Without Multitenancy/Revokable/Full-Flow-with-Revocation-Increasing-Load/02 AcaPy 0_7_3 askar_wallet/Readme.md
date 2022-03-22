@@ -8,7 +8,7 @@
 - 10 Holder AcaPy (Askar + separate in-memory sqlite DB for each instance)
 - 10 Issuer/Verifier AcaPy (Askar + Postgres)   
 
-## Cause
+## Cause of Crash
 In the version of the Load Generator used, the `numberOfBatchedCredentialRevocations` was only reset AFTER the revocation publishing process finished successfully. This led to other threads also triggering revocation publishing processes. All the parallel running revocation publishing processes seem
 to block each other on the database resulting in a crash of the system.
 
