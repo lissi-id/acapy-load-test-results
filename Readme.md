@@ -47,10 +47,6 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
   - 460 iterations per minute (300 Connections Max; 15 Connections per AcaPy): [Revokable/Full Flow Increasing Load/07 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/07%20AcaPy%200_7_3%20askar_wallet)
   - 480 iterations per minute (200 Connections Max; 10 Connections per AcaPy): [Revokable/Full Flow Increasing Load/08 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/08%20AcaPy%200_7_3%20askar_wallet)
 
-### Overloading AcaPy for 10 minutes does not crash the AcaPy
-- [Revokable/Full Flow Constant Load/09 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Constant%20Load/09%20AcaPy%200_7_3%20askar_wallet)
-- [Revokable/Full Flow Constant Load/10 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Constant%20Load/10%20AcaPy%200_7_3%20askar_wallet)
-
 ## Identified Issues
 ### Credential issuance fails due to "Revocation registry metadata not found"
 - **Test Reports**
@@ -62,9 +58,6 @@ The load tests have been performed using the [Aries Cloud Agent Load Generator](
 - **Reproducibility**
   - reproducible locally using 4 CPUs and 10 GB RAM
   
-### Drops in performance correlate to creation of new revocation registries
-- [Revokable/Full Flow Constant Load/14 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full%20Flow%20Constant%20Load/14%20AcaPy%200_7_3%20askar_wallet)
-
 ### Any RevReg Size may or may not cause issues
 Hypothesis: When ever a RevReg is full there is a chance that the system will crash completely. As smaller the RevReg size as more often a new RevReg needs to be created resulting in a hight chance that the system might crash.
 - as smaller the RevReg size as higher the chance for a crash
@@ -126,3 +119,22 @@ Hypothesis: When ever a RevReg is full there is a chance that the system will cr
   - 470 iterations per minute (200 Connections Max; 10 Connections per AcaPy): [Revokable/Full Flow Increasing Load/06 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/06%20AcaPy%200_7_3%20askar_wallet)
 - **3 Sub-Wallets [Postgres Cluster]**
   - 140 iterations per minute: [Revokable/Full Flow Increasing Load/05 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Multitenancy/Revokable/Full%20Flow%20Increasing%20Load/05%20AcaPy%200_7_3%20askar_wallet)
+
+### In very high overload situations and with revocations being published parallel, revocation registry indexes might be reused across multiple credentials
+- NOTE: it still needs to be verified if this is a flaw in the test setup and/or logging or if this actually possible
+- [Revokable/Full-Flow-with-Revocation-Constant-Load/02 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Constant-Load/02%20AcaPy%200_7_3%20askar_wallet)
+- [Revokable/Full-Flow-with-Revocation-Increasing-Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Increasing-Load/04%20AcaPy%200_7_3%20askar_wallet)
+
+### “Revocation registry metadata not found.“ when revoking credentials
+- [Revokable/Full-Flow-with-Revocation-Increasing-Load/01 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Increasing-Load/01%20AcaPy%200_7_3%20askar_wallet)
+- [Revokable/Full-Flow-with-Revocation-Increasing-Load/02 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Increasing-Load/02%20AcaPy%200_7_3%20askar_wallet)
+- [Revokable/Full-Flow-with-Revocation-Increasing-Load/03 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Increasing-Load/03%20AcaPy%200_7_3%20askar_wallet)
+- [Revokable/Full-Flow-with-Revocation-Constant-Load/02 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Constant-Load/02%20AcaPy%200_7_3%20askar_wallet)
+
+### Revocation registry not found.“ when revoking credentials
+- [Revokable/Full-Flow-with-Revocation-Increasing-Load/01 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Increasing-Load/01%20AcaPy%200_7_3%20askar_wallet)
+
+### System crashes revoking credentials
+- [Revokable/Full-Flow-with-Revocation-Increasing-Load/03 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Increasing-Load/03%20AcaPy%200_7_3%20askar_wallet)
+- [Revokable/Full-Flow-with-Revocation-Increasing-Load/04 AcaPy 0_7_3 askar_wallet](https://github.com/lissi-id/acapy-load-test-results/tree/main/Without%20Multitenancy/Revokable/Full-Flow-with-Revocation-Increasing-Load/04%20AcaPy%200_7_3%20askar_wallet)
+
