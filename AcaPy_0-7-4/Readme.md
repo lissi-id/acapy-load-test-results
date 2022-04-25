@@ -6,3 +6,4 @@
   - solves https://github.com/hyperledger/aries-cloudagent-python/issues/1588 
 - no more errors revoking credentials
 - AcaPy did never crash completely
+- Max performance was 700 rpm without revocation using a 32CPU, 32GB, SSD VM (Single Postgres instance)
