@@ -1,6 +1,4 @@
-# AcaPy Load Test Results for version 0.7.3
-
-# Findings Load Testing AcaPy 0.7.3 with Aries Askar
+# Load Test Results for AcaPy 0.7.3 with Aries Askar
 ## Positiv Findings
 ### Longest endurance test
 - **200 iterations per Minute for 12h (with Postgres HA):** [Revokable/Full Flow Constant Load/11 AcaPy 0_7_3 askar_wallet](./Without%20Multitenancy/Revokable/Full%20Flow%20Constant%20Load/11%20AcaPy%200_7_3%20askar_wallet)
