@@ -1,4 +1,4 @@
-# Load Test Results for AcaPy 0.7.3 with Aries Askar
+# Load Test Results for AcaPy 0.7.4 with Aries Askar
 ## Positiv Findings
 - at least a 11 % performance gain compared to 0.7.3
 - no more "Revocation registry metadata not found" Errors issuing revocable credentials
