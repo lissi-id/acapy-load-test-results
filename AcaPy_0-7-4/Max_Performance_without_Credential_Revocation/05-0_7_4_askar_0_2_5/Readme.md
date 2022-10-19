@@ -5,9 +5,9 @@
 - 16 GB RAM
 
 ## Setup
-- 10 Holder AcaPy (Askar + separate in-memory sqlite DB for each instance)
-- 10 Issuer/Verifier AcaPy (Askar + Postgres)
-- Issuer/Verifier Mediator activated
+- 3 Holder AcaPy (Askar + separate in-memory sqlite DB for each instance)
+- 1 Issuer/Verifier AcaPy (Askar + Postgres) 
+- Issuer/Verifier Mediator deactivated
 
 ## Versions
 - AcaPy = 0.7.4
