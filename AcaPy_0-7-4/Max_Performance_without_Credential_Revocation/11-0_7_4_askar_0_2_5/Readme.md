@@ -12,3 +12,6 @@
 
 ## Versions
 - AcaPy = 0.7.4
+
+## Results
+- the single mediator instance is maxed out as it is using 94 % of CPU and cannot scale vertically any further

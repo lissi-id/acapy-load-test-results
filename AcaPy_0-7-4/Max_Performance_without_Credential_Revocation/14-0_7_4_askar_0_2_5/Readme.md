@@ -1,4 +1,4 @@
-# Full Flow Increasing Load
+# Full Flow Constant Load at 100rpm
 
 ## Virtual Machine
 - 16 CPUs
@@ -13,7 +13,6 @@
 ## Versions
 - AcaPy = 0.7.4
 
-
 ## Results
-- even though the timeout has been introduced the number of "Error resolving recipient for forwarded message" errors remains the same
-- while a singe mediator instance used 94 % CPU in this scaled setup each mediator only uses 34 % CPU and are therefore not under a high load
+- system crashed after 329 successful iterations
+- only one mediator instance is reporting a very high amount of errors the other instances only show a low number of errors
