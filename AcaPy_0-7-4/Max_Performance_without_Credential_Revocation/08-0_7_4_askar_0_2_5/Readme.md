@@ -11,9 +11,3 @@
 
 ## Versions
 - AcaPy = 0.7.4
-
-## Results
-- if many IssuerVerifier AcaPys are started each AcaPy connects to the mediator
-  - this does not seem to be any issue
-  - the last mediator connection that has been established will also be used as the default mediator connection
-- scaling the IssuerVerifier AcaPys does not increase the performance -> remains at 100 iterations per minute
